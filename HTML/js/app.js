@@ -130,7 +130,7 @@ Here's the calling order:
             'A400': '#ff7d9e',
             'A700': '#30000c',
             'contrastDefaultColor': 'light', // whether, by default, text (contrast)
-                                                // on this palette should be dark or light
+            // on this palette should be dark or light
             'contrastDarkColors': ['50', '100', '200', '300', '400', 'A100'],
             'contrastLightColors': undefined
         };
@@ -188,62 +188,62 @@ Here's the calling order:
             $localStorage.expendSideNavPanel = !$localStorage.expendSideNavPanel;
             $scope.expendSideNavPanel = $localStorage.expendSideNavPanel;
         };
-    //Data for nav
-    $scope.currentNavItem = 'page1';
-    //Data for message
-    var imagePath = 'img/60.jpeg';
-    $scope.messages = [
-      {
-        face : imagePath,
-        what: 'Brunch this Sunday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+        //Data for nav
+        $scope.currentNavItem = 'page1';
+        //Data for message
+        var imagePath = 'img/60.jpeg';
+        $scope.messages = [
+            {
+                face: imagePath,
+                what: 'Brunch this Sunday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Monday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Monday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Tuesday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Tuesday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Wednesday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Wednesday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Thursday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Thursday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Friday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Friday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       },
-      {
-        face : imagePath,
-        what: 'Brunch this Saturday?',
-        who: 'Min Li Chan',
-        when: '3:08PM',
-        notes: " I'll be in your neighborhood doing errands"
+            {
+                face: imagePath,
+                what: 'Brunch this Saturday?',
+                who: 'Min Li Chan',
+                when: '3:08PM',
+                notes: " I'll be in your neighborhood doing errands"
       }
     ];
-    
+
     })
 
 .controller('newsController', ['$mdEditDialog', '$q', '$scope', '$timeout', function ($mdEditDialog, $q, $scope, $timeout) {
@@ -446,4 +446,10 @@ Here's the calling order:
         $element.find('input').on('keydown', function (ev) {
             ev.stopPropagation();
         });
+    })
+    .controller('login', function ($scope, $element) {
+
+        $scope.loginitem = {
+            description: 'Nuclear Missile Defense System'
+        };
     });

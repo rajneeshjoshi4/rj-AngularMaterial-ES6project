@@ -1,4 +1,4 @@
-<div layout="column" layout-fill>
+<div layout="column" layout-fill ng-controller="login">
     <div class="bv-header"></div>
     <md-content flex layout-padding class="bv-content">
         <!-- Login Sample 2 start-->
@@ -16,18 +16,24 @@
                         <img src="img/bv-logo.png" />
                     </div>
                     <div layout="row" layout-align="center center">
-                        <h3>My VeriSTAR Admin</h3>
+                        <h2>Admin Panel</h2>
                     </div>
-                    <form>
+                    <form name="loginForm">
                         <div layout="column">
 
                             <md-input-container>
                                 <label>Username</label>
-                                <input type="text" name="username" ng-model="ctrl.username" md-maxlength="100" required>
+                                <input type="text" name="username" ng-model="loginitem.username" md-maxlength="100" required>
+                                <div ng-messages="loginForm.username.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
                             </md-input-container>
                             <md-input-container>
                                 <label> Password</label>
-                                <input type="password" name="password" ng-model="ctrl.password" md-maxlength="100" required>
+                                <input type="password" name="password" ng-model="loginitem.password" md-maxlength="100" required>
+                                <div ng-messages="loginForm.password.$error">
+                                    <div ng-message="required">This is required.</div>
+                                </div>
                             </md-input-container>
                         </div>
                         <div layout="row" class="md-body-1">
@@ -43,7 +49,7 @@
                         </div>
                         <div class="bv-submit-button" layout="row" layout-align="center center">
                             <!-- <div class="bv-submit-button" layout="row" layout-align="center center" md-theme="customTheme"> -->
-                            <md-button flex="50" class="md-raised md-primary"  ui-sref="root.home"> Login</md-button>
+                            <md-button flex="50" class="md-raised md-primary" ui-sref="root.home"> Login</md-button>
                         </div>
                     </form>
                 </md-content>
