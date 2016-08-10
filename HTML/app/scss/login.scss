@@ -21,6 +21,9 @@
         }
         .bv-submit-button {
             padding-top: 10px;
+            .md-button {
+                min-width: 140px;
+            }
         }
     }
     .bv-bg-cover {

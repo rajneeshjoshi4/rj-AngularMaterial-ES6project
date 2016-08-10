@@ -1,4 +1,4 @@
-<div layout="column" layout-fill ng-controller="login">
+<div layout="column" layout-fill>
     <div class="bv-header"></div>
     <md-content flex layout-padding class="bv-content">
         <!-- Login Sample 2 start-->
@@ -16,7 +16,7 @@
                         <img src="img/bv-logo.png" />
                     </div>
                     <div layout="row" layout-align="center center">
-                        <h2>Admin Panel</h2>
+                        <h3>MyAdmin</h3>
                     </div>
                     <form name="loginForm">
                         <div layout="column">
@@ -31,14 +31,14 @@
                             <md-input-container>
                                 <label> Password</label>
                                 <input type="password" name="password" ng-model="loginitem.password" md-maxlength="100" required>
-                                <div ng-messages="loginForm.password.$error">
+                                <div ng-messages="loginForm.username.$error">
                                     <div ng-message="required">This is required.</div>
                                 </div>
                             </md-input-container>
                         </div>
                         <div layout="row" class="md-body-1">
                             <div flex>
-                                <md-switch ng-model="data.cb1" aria-label="Switch 1" class="md-warn">
+                                <md-switch ng-model="loginitem.cb1" aria-label="Switch 1" class="md-warn">
                                     <strong>Remember Me</strong>
                                 </md-switch>
                             </div>
@@ -47,9 +47,9 @@
                             </div>
 
                         </div>
-                        <div class="bv-submit-button" layout="row" layout-align="center center">
+                        <div layout="row" class="bv-submit-button" layout-align="center center">
                             <!-- <div class="bv-submit-button" layout="row" layout-align="center center" md-theme="customTheme"> -->
-                            <md-button flex="50" class="md-raised md-primary" ui-sref="root.home"> Login</md-button>
+                            <md-button class="md-raised md-primary"  ui-sref="root.home"> Login</md-button>
                         </div>
                     </form>
                 </md-content>
