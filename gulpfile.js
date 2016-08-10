@@ -64,7 +64,7 @@ gulp.task("connect", function () {
 gulp.task("open", ["connect"], function () {
     var b = gulp.src("HTML/dist/index.html")
         .pipe(open({
-            uri: "http://localhost:8282/#/",
+            uri: "http://localhost:8282/#/login",
             "app": "chrome"
         }));
     return b;
